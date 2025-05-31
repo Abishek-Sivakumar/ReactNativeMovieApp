@@ -1,5 +1,6 @@
 import { View, Text } from 'react-native'
 import { Tabs } from 'expo-router'
+import { images } from '@constants/images'
 const _Layout = () => {
     return (
         <Tabs>
