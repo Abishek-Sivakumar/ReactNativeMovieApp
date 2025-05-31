@@ -1,6 +1,4 @@
 import { Text, View } from 'react-native'
-import { Link } from 'expo-router'
-import { images } from '@constants/images'
 
 export default function Index() {
     return (
