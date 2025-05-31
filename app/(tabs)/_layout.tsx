@@ -20,7 +20,7 @@ const _Layout = () => {
                 </Text>
             </ImageBackground>
         ) : (
-            <View>
+            <View className="size-full justify-center items-center mt-4 rounded-full">
                 <Image
                     source={props.icons}
                     tintColor="#A8B5DB"
@@ -87,7 +87,7 @@ const _Layout = () => {
             <Tabs.Screen
                 name="saved"
                 options={{
-                    title: 'Saved',
+                    title: 'saved',
                     headerShown: false,
                     tabBarIcon: ({ focused }) => (
                         <>
