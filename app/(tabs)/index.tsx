@@ -9,6 +9,7 @@ import {
 import { images } from '@/constants/images'
 import { icons } from '@/constants/icons'
 import SearchBar from '@/components/SearchBar'
+import MovieCard from '@/components/MovieCard'
 import { useRouter } from 'expo-router'
 import useFetch from '@/services/useFetch'
 import { fetchMovies } from '@/services/api'
@@ -60,11 +61,18 @@ export default function Index() {
                             <FlatList
                                 data={movies}
                                 renderItem={({ item }) => (
-                                    <Text className="text-white text-sm">
-                                        {item.title}
-                                    </Text>
+                                    <MovieCard {...item} />
                                 )}
-                                scrollEnabled={false}
+                                scrollEnabled={false} //THIS IS VERY IMPORTANT
+                                keyExtractor={(item) => item.id.toString()}
+                                numColumns={3}
+                                columnWrapperStyle={{
+                                    justifyContent: 'flex-start',
+                                    gap: 20,
+                                    paddingRight: 5,
+                                    marginBottom: 10,
+                                }}
+                                className="mt-2 pb-32"
                             />
                         </>
                     </View>
